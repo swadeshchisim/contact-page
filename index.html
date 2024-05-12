@@ -8,10 +8,12 @@
     <!-- daisy ui componet cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[url('./images/bg-image.svg')] min-h-screen bg-no-repeat bg-cover">
+<body class="bg-[url('./images/bg-image.svg')] min-h-screen bg-no-repeat bg-cover pb-24">
     <!-- header starts here -->
-    <header class="container mx-auto py-8">
+    <header class="container mx-auto p-8">
         <nav>
             <img src="images/logo.svg" alt="">
         </nav>
@@ -19,22 +21,42 @@
     <!-- header ends here -->
     <!-- main section starts here -->
     <main class="container mx-auto">
-        <section class="md:w-1/2 mx-auto text-white font-bold text-center py-14 space-y-6">
+        <section class="w-full md:w-1/2 mx-auto text-white font-bold text-center py-14 space-y-6">
             <h2 class="text-[64px]">Interested in our business pricing?</h2>
             <h3 class="text-2xl">Fill out the form to view details and we’ll <br> contact you as soon as possible.</h3>
         </section>
         <!-- contact area starts here -->
-        <form class="container">
-            <div class="flex gap-8 justify-center">
-                <span class="">
+        <form class="w-full lg:w-1/2 mx-auto bg-[#CDD5E0] bg-opacity-25 rounded-3xl px-9 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-14 content-center">
+                <div>
                     <label class="text-sm text-white" for="user-name">Name</label><br>
-                    <input id="user-name" type="text" placeholder="Ethan Johnson" class="input input-bordered w-96 max-w-xs" />
-                </span>
-               <span>
+                    <input id="user-name" type="text" placeholder="Ethan Johnson" class="input input-bordered w-full md:max-w-xs text-base font-medium rounded-xl" />
+                </div>
+               <div>
                     <label class="text-sm text-white" for="email">Company Email</label><br>
-                    <input id="email" type="text" placeholder="ethan@johnson.com" class="input input-bordered w-96 max-w-xs" />
-               </span>
+                    <input id="email" type="text" placeholder="ethan@johnson.com" class="input input-bordered w-full md:max-w-xs text-base font-medium rounded-xl" />
+               </div>
+               <div>
+                    <label class="text-sm text-white">Company Size</label><br>
+                    <select class="select select-bordered w-full md:max-w-xs text-base font-medium rounded-xl">
+                        <option disabled selected>50-100 employees</option>
+                        <option>Portfolio</option>
+                        <option>E-commerce</option>
+                    </select>
+               </div>
+               <div>
+                    <label class="text-sm text-white">Company Subject</label><br>
+                    <select class="select select-bordered w-full md:max-w-xs text-base font-medium rounded-xl">
+                        <option disabled selected>Building Landing Pages</option>
+                        <option>Portfolio</option>
+                        <option>E-commerce</option>
+                    </select>
+               </div>
             </div>
+            <div class="w-full my-12 text-[#111729]">
+                <textarea class="textarea w-full md:max-w-full rounded-xl font-medium text-base" rows="4" placeholder="50-100 employees"></textarea>
+            </div>
+            <button class="min-h-20 min-w-full text-[#4036A9] text-2xl py-4 bg-white font-medium rounded-xl">Contact Sales</button>
         </form>
         <!-- contact area ends here -->
     </main>
